@@ -21,3 +21,11 @@ def repwn(retry=1,timeout=0):
                     sys.exit(0)
         return  __repwn
     return _repwn
+
+def padding(size, bList='\n\r\x00'):
+    pad = ''
+    for i in range(size):
+        ch = os.urandom(1)
+        if ch not in bList:
+            pad += ch
+    return pad
