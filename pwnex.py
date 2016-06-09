@@ -24,8 +24,10 @@ def repwn(retry=1,timeout=0):
 
 def padding(size, bList='\n\r\x00'):
     pad = ''
-    for i in range(size):
+    i = 0
+    while i < size:
         ch = os.urandom(1)
         if ch not in bList:
             pad += ch
+            i += 1
     return pad
