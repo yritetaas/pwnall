@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - pwnlog@localhost" uuid="024f31ac-d1d0-42e5-b30a-1942349d1778">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>pwnlog.*</schema-pattern>
+      <default-schemas>pwnlog.*</default-schemas>
+    </data-source>
+  </component>
+</project>
